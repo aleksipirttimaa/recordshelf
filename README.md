@@ -46,13 +46,21 @@ python ./manage.py migrate
 
 This creates a local file `./db.sqlite3`.
 
+### Create superuser
+
+Create your first user. This user will have permissions to create more users in the `[/admin](http://localhost:8000/admin)`-pages.
+
+```sh
+python ./manage.py createsuperuser
+```
+
 ### Development server
 
 ```sh
 python ./manage.py runserver
 ```
 
-The development server is now listening to <http://localhost:8000>.
+The development server is now listening on <http://localhost:8000>.
 
 ### Generate migrations
 
