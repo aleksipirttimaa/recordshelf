@@ -48,7 +48,7 @@ This creates a local file `./db.sqlite3`.
 
 ### Create superuser
 
-Create your first user. This user will have permissions to create more users in the `[/admin](http://localhost:8000/admin)`-pages.
+Create your first user. This user will have permissions to create more users in the [`/admin`](http://localhost:8000/admin)-pages.
 
 ```sh
 python ./manage.py createsuperuser
