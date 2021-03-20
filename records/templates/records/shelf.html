@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}My shelf{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">My records</h1>
+</div>
+
+{% if possessions %}
+<ul class="list-group">
+{% for p in possessions %}
+    <li class="list-group-item">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
+            <div>
+                <!--<a href="/artists/{{ p.record.artist.id }}">-->{{ p.record.artist }}<!--</a>--> - 
+                <!--<a href="/record/{{ p.record.id }}">-->{{ p.record }}<!--</a>-->
+            </div>
+            <a href="/records/{{ p.record.id }}/exorcise?next-shelf=1" type="button" class="btn btn-sm btn-outline-secondary">Remove from my library</a>
+        </div>
+    </li>
+{% endfor %}
+</ul>
+{% else %}
+<i>You don't have any records yet.</i>
+{% endif %}
+
+{% endblock %}
